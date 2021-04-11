@@ -1,0 +1,32 @@
+@import "tipografia.css";
+@import "color.css";
+@import "header.css";
+
+.my_description{
+  margin-top: 73px;
+  max-width: 80%;
+  text-align: left;
+  margin-left: 3px;
+}
+
+.my-container-list{
+  margin-top: 73px;
+  max-width: 80%;
+  margin-left: 3px;
+}
+
+.attributes{
+  margin-top: 10px;
+}
+
+.btn-i-utente{
+  background-color: #CFFAD8;
+  color: #3F3F3F;
+  border-color: #CFFAD8;
+  margin-top: 15px;
+}
+
+.btn-i-elimina{
+  color: #white;
+  margin-top: 15px;
+}

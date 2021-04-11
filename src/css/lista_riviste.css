@@ -1,0 +1,42 @@
+@import "tipografia.css";
+@import "color.css";
+@import "header.css";
+
+.my_description{
+  margin-top: 73px;
+  text-align: left;
+  margin-left: 3px;
+}
+
+
+
+.my-container-list{
+  margin-top: 73px;
+  max-width: 80%;
+  margin-left: 3px;
+}
+
+.my-row-list{
+  height: 80px;
+  margin-left: 3px;
+}
+
+.td{
+  padding-left: 0px;
+}
+
+.user-modification{
+  margin-right: 9px;
+}
+
+.user-modification:hover{
+  text-decoration: none;
+  margin-right: 9px;
+}
+
+.btn-i-utente{
+  background-color: #CFFAD8;
+  color: #3F3F3F;
+  border-color: #CFFAD8;
+  margin-top: 15px;
+}

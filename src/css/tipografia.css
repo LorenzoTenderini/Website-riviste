@@ -1,0 +1,35 @@
+.font-size-1{
+    font-size: 18px;
+}
+
+.font-size-2{
+    font-size: 22px;
+}
+
+.font-size-3{
+    font-size: 30px;
+}
+
+.font-size-4{
+    font-size: 32px;
+}
+
+.font-size-5{
+    font-size: 33px;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.font-regular{
+  font-weight: regular;
+}
+
+.font-roboto{
+  font-family: Roboto, sans-serif;
+}
+
+.font-merriweather{
+  font-family: Merriweather, serif;
+}

@@ -1,0 +1,29 @@
+@import "tipografia.css";
+@import "color.css";
+@import "header.css";
+
+.margin-row{
+  margin-top: 55px;
+}
+
+.my-container-list{
+  margin-top: 73px;
+  max-width: 80%;
+  margin-left: 3px;
+}
+
+.my-form{
+  height: 20px;
+}
+
+.btn-i-utente{
+  background-color: #CFFAD8;
+  color: #3F3F3F;
+  border-color: #CFFAD8;
+  margin-top: 15px;
+}
+
+.btn-i-annulla{
+  color: #3F3F3F;
+  margin-top: 15px;
+}

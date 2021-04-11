@@ -1,7 +1,7 @@
 {
   "name": "fe-bootstrap",
   "version": "1.0.0",
-  "description": "",
+  "description": "website-riviste",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack",
@@ -36,8 +36,17 @@
     "webpack-provide-global-plugin": "0.0.1"
   },
   "dependencies": {
-    "gsap": "^2.1.3",
+    "bootstrap": "^4.6.0",
+    "gsap": "^3.6.1",
     "moment": "^2.24.0",
     "moment-with-locales-es6": "^1.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LorenzoTenderini/Website-riviste.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LorenzoTenderini/Website-riviste/issues"
+  },
+  "homepage": "https://github.com/LorenzoTenderini/Website-riviste#readme"
 }

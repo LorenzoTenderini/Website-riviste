@@ -10,7 +10,11 @@ const fs = require('fs');
 */
 
 const obj = {
-	index: path.join(path.resolve(__dirname, 'src/js'), 'index.js'),
+	lista_utenti: path.join(path.resolve(__dirname, 'src/js'), 'lista_utenti.js'),
+	lista_riviste: path.join(path.resolve(__dirname, 'src/js'), 'lista_riviste.js'),
+	lista_comuni: path.join(path.resolve(__dirname, 'src/js'), 'lista_comuni.js'),
+	in_utente: path.join(path.resolve(__dirname, 'src/js'), 'in_utente.js'),
+	dett_utente: path.join(path.resolve(__dirname, 'src/js'), 'dett_utente.js'),
 }
 
 module.exports = obj

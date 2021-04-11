@@ -1,0 +1,31 @@
+.my_li{
+  margin-left: 56px;
+  font-size: 33px;
+  color: #3F3F3F;
+  font-weight: bold;
+  font-style: Roboto;
+}
+
+.my_li:hover{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.active{
+  font-size: 33px;
+  color: #4544A0;
+}
+
+.active:hover{
+  text-decoration: none;
+}
+
+.logo{
+  background-color: red;
+  color: red;
+}
+
+.my-navbar{
+    background-color: #FDFDFD;
+    margin-left: 0px;
+}
