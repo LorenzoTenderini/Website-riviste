@@ -12,10 +12,6 @@
   margin-left: 3px;
 }
 
-.my-form{
-  height: 20px;
-}
-
 .btn-i-utente{
   background-color: #CFFAD8;
   color: #3F3F3F;
@@ -26,4 +22,13 @@
 .btn-i-annulla{
   color: #3F3F3F;
   margin-top: 15px;
+}
+
+.required {
+  display: none;
+}
+
+.message{
+
+  font-size: 80px;
 }

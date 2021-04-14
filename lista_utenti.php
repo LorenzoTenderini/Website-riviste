@@ -58,7 +58,6 @@
 	<script type="text/javascript" src="dist/lista_utenti.bundle.js"></script>
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="dist/lista_utenti.css">
-
 	<?php include("cmp/header.php");
 	navbar(1);
 	?>

@@ -12,10 +12,41 @@
     else {
       echo "<script>console.log('Connection db succesfully')</script>";
       $GLOBALS['check'] = 1;
+
     }
 
-    function inserisci(){
-      echo "ciao";
+    function stamp_abbonamenti(){
+      if ($GLOBALS["check"]==1) {
+  			$query="SELECT `Titolo` FROM `riviste` WHERE 1";
+  			$result=mysqli_query($GLOBALS['conn'],$query);
+  			$i=0;
+  			if (mysqli_num_rows($result) > 0) {
+  				 while($row = mysqli_fetch_assoc($result)){
+  					 echo '
+  					 <option value="'.$row["Titolo"].'">'.$row["Titolo"].'</option>';
+  				 }
+  			}
+  		}
+  		else {
+  			echo "<script>console.log('Stamp abbonamenti failed')</script>";
+  		}
+    }
+
+    function stamp_comuni(){
+      if ($GLOBALS["check"]==1) {
+  			$query="SELECT `Comune` FROM `comuni` WHERE 1";
+  			$result=mysqli_query($GLOBALS['conn'],$query);
+  			$i=0;
+  			if (mysqli_num_rows($result) > 0) {
+  				 while($row = mysqli_fetch_assoc($result)){
+  					 echo '
+  					 <option value="'.$row["Comune"].'">'.$row["Comune"].'</option>';
+  				 }
+  			}
+  		}
+  		else {
+  			echo "<script>console.log('Stamp comuni failed')</script>";
+  		}
     }
     ?>
   </head>
@@ -28,25 +59,25 @@
     navbar(1);
     ?>
     <div class="container my-container-list">
-      <form onsubmit="document.write('<?php inserisci();?>');" method="post">
+      <form name="ins_form" action="cmp/ins_utente.php" method="post">
     	<div class="row">
       	<div class="col-md-4 font-size-3 font-bold font-roboto">Inserimento utente</div>
     	</div>
       <div class="row margin-row">
         <div class="col-md-4">
-          <div class="container">
+          <div class="container required">
             <div class="row">
               <div class="col-md-2 font-size-2 font-regular font-roboto color-1">
                 Nome:
               </div>
             </div>
-            <div class="row">
+            <div class="row required">
               <div class="col-md-10">
-                <input type="text" class="form-control " id="name" placeholder="Nome">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nome">
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-5 color-5">
+            <div class="row ">
+              <div class="col-md-5 color-5 message" id="c-o-1">
                 *Campo obbligatorio
               </div>
             </div>
@@ -61,7 +92,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <input type="text" class="form-control" id="surname" placeholder="Cognome">
+                <input type="text" class="form-control" id="surname" name="surname" placeholder="Cognome">
               </div>
             </div>
             <div class="row">
@@ -82,7 +113,7 @@
             </div>
             <div class="row">
               <div class="col-md-10">
-                <input type="email" class="form-control" id="email" placeholder="Email">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
               </div>
             </div>
             <div class="row">
@@ -101,7 +132,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <input type="text" class="form-control" id="phone" placeholder="+39 123 456 7891">
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="+39 123 456 7891">
               </div>
             </div>
             <div class="row">
@@ -122,7 +153,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <select class="form-control" id="type-address">
+                <select class="form-control" id="type-address" name="type-address">
                   <option value="Via">Via</option>
                   <option value="Piazza">Piazza</option>
                   <option value="Corso">Corso</option>
@@ -146,7 +177,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <input type="text" class="form-control" id="address" placeholder="Nome via">
+                <input type="text" class="form-control" id="address" name="address" placeholder="Nome via">
               </div>
             </div>
             <div class="row">
@@ -165,7 +196,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <input type="number" class="form-control" id="n-civico" placeholder="30">
+                <input type="number" class="form-control" id="n-civico" name="n-civico" placeholder="30">
               </div>
             </div>
             <div class="row">
@@ -186,7 +217,9 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <input type="text" class="form-control" id="comune" placeholder="Nome comune">
+                <select class="form-control" id="comune" name="comune">
+                  <?php stamp_comuni(); ?>
+                </select>
               </div>
             </div>
             <div class="row">
@@ -205,12 +238,8 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <select multiple class="form-control my-form" id="abbonamenti">
-                  <option>Outpump</option>
-                  <option>Oggi</option>
-                  <option>Vogue</option>
-                  <option>Moto.it</option>
-                  <option>Auto.it</option>
+                <select multiple class="form-control" id="abbonamento" name="abbonamento[]">
+                  <?php stamp_abbonamenti(); ?>
                 </select>
               </div>
             </div>
@@ -230,7 +259,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <input type="date" class="form-control" id="date" placeholder="gg/mm/aaaa">
+                <input type="date" class="form-control" id="date" name="date" placeholder="gg/mm/aaaa">
               </div>
             </div>
             <div class="row">
